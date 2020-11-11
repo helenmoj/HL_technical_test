@@ -74,7 +74,7 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 - Again in terminal, run 'bundle' to make sure you have the appropriate gems installed
 
 - To run all of the scenarios within a feature file run the tag set at the start of the feature cucumber -t @(tag_name), example - cucumber -t @JSTests
-- To run individual scenarios run the tag set at the start of each scenario, example -  cucumber -t @(JS1).
+- To run individual scenarios run the tag set at the start of each scenario, example -  cucumber -t @js1
 - run headless
 
 **- Approach**
@@ -89,14 +89,12 @@ Both scenarios for Form Authentication were coded - 'correct details input' and 
 # incorrect error message, visible_text again
 
 
-
 - **Test 2 - Dynamic Loading**
 
 Both scenarios for Dynamic loading were coded - clicking 'Example 1' or 'Example 2'. 
 To ensure for both options I added a step before selecting 'start' in which I could see either the text ' Example 2: Element rendered after the fact' or 'Example 1: Element on page that is hidden'. To do this I used visible_text to locate and check the relevant text exists. 
 
 Once the user clicks on start then the loading bar only appears for a short time, so 'sleep' is used to wait a short while. After the wait, the presence of the loading bar is checked again.
-
 
 - **Test 3 - Javascript Alerts**
 
