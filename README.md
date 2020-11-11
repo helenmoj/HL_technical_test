@@ -75,31 +75,35 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 
 - To run all of the scenarios within a feature file run the tag set at the start of the feature cucumber -t @(tag_name), example - cucumber -t @JSTests
 - To run individual scenarios run the tag set at the start of each scenario, example -  cucumber -t @js1
-- run headless
+- I have added a commented out section in the 'env.rb' file (within the 'support' folder) where these tests can also be run headless if preferred. To do this then uncomment this line of code '@browser = Watir::Browser.new :chrome#, headless: true'.
 
 **- Approach**
 
-- I focused on building a page object model and separated my methods into individual related classes as this helps keep the code DRY and easy to pick up and add to at any point. 
+- I focused on building a page object model and separated my methods into individual related classes as this helps keep the code 'DRY' and easy to pick up, maintain and add to at any point. 
 - Each test has a cucumber feature file. The steps for the feature files have a corresponding step_defs file in the 'step definitions' folder which call methods for each step from the 'pages' folder.
 
 - **Test 1 - Form Authentication**
 
-Both scenarios for Form Authentication were coded - 'correct details input' and 'incorrect details input'.
-#successful, visible_text again to check success message within account
-# incorrect error message, visible_text again
+Both scenarios for Form Authentication were covered - 'correct details input' and 'incorrect details input'.
+I used 'visible_text' locator to ensure I had either logged in successfully - '/Welcome to the Secure Area. When you are done click logout below'
+or had failed to login and saw the error message - 'Your username is invalid!'
 
 
 - **Test 2 - Dynamic Loading**
 
-Both scenarios for Dynamic loading were coded - clicking 'Example 1' or 'Example 2'. 
-To ensure for both options I added a step before selecting 'start' in which I could see either the text ' Example 2: Element rendered after the fact' or 'Example 1: Element on page that is hidden'. To do this I used visible_text to locate and check the relevant text exists. 
+Both scenarios for Dynamic loading were covered - clicking 'Example 1' or 'Example 2'. 
+To ensure I tested both options I added a step just before selecting 'start' in which I could see the text either associated with Example 1 or 2.  This is        'Example 2: Element rendered after the fact' or 'Example 1: Element on page that is hidden'. 
 
-Once the user clicks on start then the loading bar only appears for a short time, so 'sleep' is used to wait a short while. After the wait, the presence of the loading bar is checked again.
+To do this I used the 'visible_text' locator to identify and check the relevant text exists. 
+
+Once the user clicks on the start button then the loading bar appears (but only for a short time), so I inputted a 'sleep' to wait a short while. After the wait, the presence of the loading bar is checked again.
 
 - **Test 3 - Javascript Alerts**
 
-All scenarios for Javascript Alerts:
+All scenarios for Javascript Alerts were covered:
 
-JS Confirm
-JS Alert
-JS Prompt
+- JS Confirm button: Covered either selecting for the JS popup 'OK' or 'Cancel'. I used the 'visible_text' locator to check I saw the message  'You clicked: Ok'. If the user selected 'OK' or 'Cancel' I saw the message 'You clicked: Cancel' if selected 'Cancel'. 
+
+- JS Alert button: Covered the one option which for the JS popup to select 'OK'. I used the 'visible_text' locator to check I saw the message  'You successfuly clicked an alert'
+
+- JS Prompt button: Covered the three options which were either to input text and select 'OK', to not input anything and to 'OK' or to select 'Cancel'. I used the visible_text locator to check I saw either for 'input and OK', 'You entered: (input text)', for 'OK (no input), 'You entered:' and for 'Cancel', 'You entered: null'. 
