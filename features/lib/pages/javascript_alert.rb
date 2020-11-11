@@ -1,5 +1,4 @@
 class Javascript
-  include PageObject
 
   def initialize(browser)
     @browser = browser
@@ -7,7 +6,6 @@ class Javascript
 
 
   #fields
-  #
   def js_alert_link
     @browser.link(href: "/javascript_alerts").wait_until(timeout: 15, &:present?)
   end
@@ -43,6 +41,7 @@ class Javascript
   end
 
   def js_alert_ok
+    # successfully spelt incorrectly on the website so coded how its spelt in order use 'visible text'
     @browser.p(visible_text: /You successfuly clicked an alert/).exists?
   end
 
@@ -64,7 +63,6 @@ class Javascript
   end
 
   # Actions
-
   def select_js_alert
     js_alert_link.click
   end

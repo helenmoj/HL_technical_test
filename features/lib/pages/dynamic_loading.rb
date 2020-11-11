@@ -11,9 +11,17 @@ class DynamicallyLoaded
     @browser.link(href: "/dynamic_loading").wait_until(timeout: 15, &:present?)
   end
 
-  def element_rendered_after_fact_start_button
+  def start_button
     @browser.button(visible_text: /Start/)
   end
+
+ def rendered_after_fact_text
+   @browser.h4(visible_text: /Example 2: Element rendered after the fact/).exists?
+ end
+
+ def element_on_page_hidden_text
+   @browser.h4(visible_text: /Example 1: Element on page that is hidden/).exists?
+ end
 
   def select_example_one
     @browser.link(:xpath => "//*[@id='content']/div/a[1]")
@@ -22,6 +30,10 @@ class DynamicallyLoaded
   def select_example_two
     @browser.link(:xpath => "//*[@id='content']/div/a[2]")
   end
+
+ def check_loading_bar_visible
+ @browser.div(visible_text:/Loading.../)
+ end
 
   def hello_world
     @browser.div(id:"finish")
@@ -42,7 +54,8 @@ class DynamicallyLoaded
   end
 
   def start_button_select
-    element_rendered_after_fact_start_button.click
+    start_button.click
+   # element_on_page_hidden.click
   end
 
   def check_hello_world

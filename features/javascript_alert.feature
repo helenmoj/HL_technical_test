@@ -1,54 +1,50 @@
-@FunctionTests
-
+@JSTests
 Feature: Javascript alert tests
 
   Background:
     Given I reach the internet page
     And I select javascript alerts
 
-
     # select js confirm and select ok
+  @js1
   Scenario: Confirm I can click and select ok for JS confirm
     Given I click the JS Confirm button
     When I select ok on the js alert
-    Then the result displays 'You clicked: Ok'
+    Then the result is 'You clicked: Ok'
 
+
+     # select js confirm and select cancel
+  @js2
   Scenario: Confirm I can click and select cancel for JS confirm
     Given I click the JS Confirm button
     When I select cancel on the js alert
-    Then the result shows 'You clicked: Cancel'
+    Then the result is 'You clicked: Cancel'
 
+    # select js alert and select ok
+  @js3
   Scenario: Confirm I can click and select ok for JS alert
     Given I click the JS alert button
     When I select ok on the js alert
     Then the result is 'You successfuly clicked an alert'
 
+    # select js prompt, input text & select ok
+  @js4
   Scenario: Confirm I can click and input text then select ok for JS prompt
     Given I click the JS prompt button
     When I input text
     And I select ok on the js alert
-    Then the result will be 'You entered: hello'
+    Then the result is 'You entered: hello'
 
+    # select js prompt & select ok
+  @js5
   Scenario: Confirm I can click and select ok for JS prompt
     Given I click the JS prompt button
     When I select ok on the js alert
-    Then the result will show 'You entered:'
+    Then the result is 'You entered:'
 
+    # select js prompt & select cancel
+  @js6
   Scenario: Confirm I can click and select cancel for JS prompt
     Given I click the JS prompt button
     When I select cancel on the js alert
-    Then the result of cancel will be 'You entered: null'
-
-
-
-
-
-
-
-  # select js confirm and select cancel
-  # select other 2 buttons, both ok and cancel
-
-
-    # Click for JS Confirm: click the buttons on the alert and check that a relevant
-
-  #Optional: write tests for the other buttons on the page “Click for JS Alert” and “Click for  JS Prompt”.
+    Then the result is 'You entered: null'

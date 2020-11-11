@@ -1,13 +1,10 @@
 class Authentication
 
-  include PageObject
-
   def initialize(browser)
     @browser = browser
   end
 
   #fields
-  #
   def authentication_link
     @browser.link(href: "/login").wait_until(timeout: 15, &:present?)
   end

@@ -1,25 +1,20 @@
-#require 'rspec'
-#require 'selenium-webdriver'
-#require 'net/http'
-
 
 require 'watir'
-require 'page-object'
 
 
 Before do
-  @browser = Watir::Browser.new :chrome
-  #@browser = Selenium::WebDriver.new :chrome
-  #@browser = Selenium::WebDriver.for :Chrome
+  @browser = Watir::Browser.new :chrome#, headless: true
   @browser.window.maximize
 end
 
-#def scroll_to(element)
- # Utils.scroll_into_view(element)
- # element
-#end
+
+def scroll_to(element)
+  Utils.scroll_into_view(element)
+  element
+end
 
 After do |scenario|
+  # if fails then have a folder created 'screenshots' which will show details of failing scenarios.
   if scenario.failed?
     screenshot_dir = 'screenshots'
     Dir.mkdir(screenshot_dir) unless File.directory?(screenshot_dir)
@@ -29,15 +24,7 @@ After do |scenario|
   end
 end
 
+
 After do
   @browser.close
 end
-
-#After do
-#  @browser.close
-  #@browser.quit
-#end
-
-#at_exit do
- # browser.quit
-#end

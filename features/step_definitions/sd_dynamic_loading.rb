@@ -1,28 +1,41 @@
-require 'pry'
-
-#require 'selenium-cucumber'
-
-
-require_relative '../../../../Helen Rubymine project/Hargreaves-Lansdown-Test/features/lib/pages/dynamic_loading.rb'
 
 And 'I click example two' do
-  @example_2 = DynamicallyLoaded.new(@browser)
-  @example_2.click_example_two
+  @dyn_loaded = DynamicallyLoaded.new(@browser)
+  @dyn_loaded.click_example_two
 end
+
+And'I see the text {string} is displayed' do |string|
+  @dyn_loaded.rendered_after_fact_text
+end
+
 
 And 'I click example one' do
- @example_1 = DynamicallyLoaded.new(@browser)
-  @example_1.click_example_one
+  @dyn_loaded = DynamicallyLoaded.new(@browser)
+  @dyn_loaded.click_example_one
 end
+
+And 'I see the text {string}' do |string|
+  @dyn_loaded.element_on_page_hidden_text
+end
+
 
 And'I select the start button' do
-  @start_button = DynamicallyLoaded.new(@browser)
-  @start_button.start_button_select
+  @dyn_loaded.start_button_select
 end
 
-Then'the loading bar disappears and {string} is displayed' do |verify|
-  sleep(10)
-  @hello_world = DynamicallyLoaded.new(@browser)
-  @hello_world.check_hello_world
+When 'The loading bar has disappeared' do
+  # Confirm Loading bar is visible immediately after clicking start
+   @dyn_loaded.check_loading_bar_visible.eql? true
+   # Added a small 'sleep' to ensure the page will load
+   sleep 2
+   # Confirm Loading bar is not visible a while after clicking start
+   @dyn_loaded.check_loading_bar_visible.eql? false
+end
+
+
+Then'{string} is displayed' do |verify|
+  # Added a small 'sleep' to ensure the hello world message has time to display
+  sleep 2
+  @dyn_loaded.check_hello_world
   end
 
