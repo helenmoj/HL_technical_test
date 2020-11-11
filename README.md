@@ -80,9 +80,20 @@ To run individual scenarios run the tag set at the start of each scenario, examp
 I focused on building a page object model and separated my methods into individual related classes as this helps keep the code DRY and easy to pick up and add to at any point. 
 Each test has a cucumber feature file. The steps for the feature files have a corresponding step_defs file in the 'step definitions' folder which call methods for each step from the 'pages' folder.
 
+**- Test 1 - Form Authentication**
+
+
 **- Test 2 - Dynamic Loading**
 For the second test, once the 'Dynamic Loading' page has been reached, the start button is clicked. Then the presence of the loading bar is tested.
 
 The loading bar should only appear temporarily, so 'sleep' is used to wait a short while. After the wait, the presence of the loading bar is checked again.
 
 I manually evaluated how long the loading bar is present for and added a sleep length correspondingly. If there were a similar situation where 'sleep' should not be used, a function containing a while loop which cycles for an amount of time until either the loading bar disappears or too much time has passed could be used, such as the following written in pseudo-code:
+
+
+**- Test 2 - Javascript Alerts**
+
+
+# remember to add about headless in env.rb
+
+
