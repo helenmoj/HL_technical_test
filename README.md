@@ -11,7 +11,7 @@ Confirm can input correct details and enter account
 **Scenario 2**  (@auth2)
 Navigate to https://the-internet.herokuapp.com/
 Click 'Form Authentication'.
-Confirm can input incorrect details and user sees an error message
+Confirm can input incorrect details and user doesn't enter account but instead sees an error message
 
 
 - **Feature 2: Dynamic Loading**
