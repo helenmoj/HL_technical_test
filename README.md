@@ -83,16 +83,27 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 
 - **Test 1 - Form Authentication**
 
+Both scenarios for Form Authentication were coded - 'correct details input' and 'incorrect details input'.
+#successful, visible_text again to check success message within account
+# incorrect error message, visible_text again
+
+
 
 - **Test 2 - Dynamic Loading**
-For the second test, once the 'Dynamic Loading' page has been reached, the start button is clicked. Then the presence of the loading bar is tested.
 
-The loading bar should only appear temporarily, so 'sleep' is used to wait a short while. After the wait, the presence of the loading bar is checked again.
+Both scenarios for Dynamic loading were coded - clicking 'Example 1' or 'Example 2'. 
+To ensure for both options I added a step before selecting 'start' in which I could see either the text ' Example 2: Element rendered after the fact' or 'Example 1: Element on page that is hidden'. To do this I used visible_text to locate and check the relevant text exists. 
 
-I manually evaluated how long the loading bar is present for and added a sleep length correspondingly. If there were a similar situation where 'sleep' should not be used, a function containing a while loop which cycles for an amount of time until either the loading bar disappears or too much time has passed could be used, such as the following written in pseudo-code:
+Once the user clicks on start then the loading bar only appears for a short time, so 'sleep' is used to wait a short while. After the wait, the presence of the loading bar is checked again.
 
 
 - **Test 3 - Javascript Alerts**
+
+All scenarios for Javascript Alerts:
+
+JS Confirm
+JS Alert
+JS Prompt
 
 
 # remember to add about headless in env.rb
