@@ -29,24 +29,23 @@ class Authentication
   end
 
   def input_valid_user
-    @browser.input(:id,"username").send_keys("tomsmith")
+    @browser.input(id:"username").send_keys("tomsmith")
   end
 
   def input_invalid_user
-    @browser.input(:id,"username").send_keys("suesmith")
+    @browser.input(id: "username").send_keys("suesmith")
   end
 
   def input_valid_password
-    @browser.input(:id,"password").send_keys("SuperSecretPassword!")
+    @browser.input(id:"password").send_keys("SuperSecretPassword!")
   end
 
   def input_invalid_password
-    @browser.input(:id,"password").send_keys("SuperOpenPassword!")
+    @browser.input(id:"password").send_keys("SuperOpenPassword!")
   end
 
   def select_login
     login_button.click
   end
-
 end
 
