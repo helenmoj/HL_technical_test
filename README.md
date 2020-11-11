@@ -3,12 +3,12 @@ Deliver a working test suite for the following examples from https://the-interne
 
 - **Feature 1  -Form Authentication**
 
-**- Scenario 1** - (@auth1)
+**Scenario 1** (@auth1)
 Navigate to https://the-internet.herokuapp.com/
 Click 'Form Authentication'.
 Confirm can input correct details and enter account
 
-- Scenario 2 - (@auth2)
+**Scenario 2**  (@auth2)
 Navigate to https://the-internet.herokuapp.com/
 Click 'Form Authentication'.
 Confirm can input incorrect details and user sees an error message
@@ -16,12 +16,12 @@ Confirm can input incorrect details and user sees an error message
 
 - **Feature 2  -Dynamic Loading**
 
-- Scenario 1 - (@dyn1)
+**Scenario 1** (@dyn1)
 Navigate to https://the-internet.herokuapp.com/
 Click 'Dynamically Loaded Page Elements' and click 'Example 2: Element rendered after the fact.'
 Confirm 'Hello World!' is rendered after the loading bar disappears.
 
-- Scenario 2 - (@dyn2)
+**Scenario 2** (@dyn2)
 Navigate to https://the-internet.herokuapp.com/
 Click 'Dynamically Loaded Page Elements' and click 'Example 1: Element on page that is hidden.' 
 Confirm 'Hello World!' is rendered after the loading bar disappears.
