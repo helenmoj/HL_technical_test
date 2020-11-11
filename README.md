@@ -85,7 +85,7 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 - **Test 1 - Form Authentication**
 
 Both scenarios for Form Authentication were covered - 'correct details input' and 'incorrect details input'.
-I used 'visible_text' locator to ensure I had either logged in successfully - '/Welcome to the Secure Area. When you are done click logout below'
+I used the 'visible_text' locator to ensure I had either logged in successfully - '/Welcome to the Secure Area. When you are done click logout below'
 or had failed to login and saw the error message - 'Your username is invalid!'
 
 
