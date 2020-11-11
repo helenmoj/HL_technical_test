@@ -102,8 +102,8 @@ Once the user clicks on the start button then the loading bar appears (but only 
 
 All scenarios for Javascript Alerts were covered:
 
-- JS Confirm button: Covered either selecting for the JS popup 'OK' or 'Cancel'. I used the 'visible_text' locator to check I saw the message  'You clicked: Ok'. If the user selected 'OK' or 'Cancel' I saw the message 'You clicked: Cancel' if selected 'Cancel'. 
+- JS Confirm button: Covered either selecting on the JS popup 'OK' or 'Cancel'. I used the 'visible_text' locator to check I could locate this message  'You clicked: Ok'. If the user selected 'OK' or 'Cancel' I saw the message 'You clicked: Cancel' if selected 'Cancel'. 
 
-- JS Alert button: Covered the one option which for the JS popup to select 'OK'. I used the 'visible_text' locator to check I saw the message  'You successfuly clicked an alert'
+- JS Alert button: Covered the one option which on the JS popup was to select 'OK'. I used the 'visible_text' locator to check I could locate this message  'You successfuly clicked an alert'
 
-- JS Prompt button: Covered the three options which were either to input text and select 'OK', to not input anything and to 'OK' or to select 'Cancel'. I used the visible_text locator to check I saw either for 'input and OK', 'You entered: (input text)', for 'OK (no input), 'You entered:' and for 'Cancel', 'You entered: null'. 
+- JS Prompt button: Covered the three options which on the JS popup was to input text and select 'OK', to not input anything and to select 'OK' or to select 'Cancel'. I used the visible_text locator to locate the text which for  'input and OK' = 'You entered: (input text)', for 'OK (no input) = 'You entered:' and for 'Cancel' ='You entered: null'. 
