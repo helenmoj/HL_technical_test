@@ -1,7 +1,7 @@
 # HL_technical_test
 Deliver a working test suite for the following examples from https://the-internet.herokuapp.com/ using gherkin syntax. 
 
-- **Feature 1  -Form Authentication**
+- **Feature 1: Form Authentication**
 
 **Scenario 1** (@auth1)
 Navigate to https://the-internet.herokuapp.com/
@@ -14,7 +14,7 @@ Click 'Form Authentication'.
 Confirm can input incorrect details and user sees an error message
 
 
-- **Feature 2  -Dynamic Loading**
+- **Feature 2: Dynamic Loading**
 
 **Scenario 1** (@dyn1)
 Navigate to https://the-internet.herokuapp.com/
@@ -27,7 +27,7 @@ Click 'Dynamically Loaded Page Elements' and click 'Example 1: Element on page t
 Confirm 'Hello World!' is rendered after the loading bar disappears.
 
 
-- **Feature 3  -Javascript Alerts**
+- **Feature 3: Javascript Alerts**
 
 **Scenario 1** (@js1)
 Navigate to https://the-internet.herokuapp.com/
@@ -75,6 +75,7 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 
 - To run all of the scenarios within a feature file run the tag set at the start of the feature cucumber -t @(tag_name), example - cucumber -t @JSTests
 - To run individual scenarios run the tag set at the start of each scenario, example -  cucumber -t @(JS1).
+- run headless
 
 **- Approach**
 
@@ -104,8 +105,3 @@ All scenarios for Javascript Alerts:
 JS Confirm
 JS Alert
 JS Prompt
-
-
-# remember to add about headless in env.rb
-
-
