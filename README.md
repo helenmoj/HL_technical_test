@@ -79,7 +79,7 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 
 **Approach**
 
-- I focused on building a BDD Cucumber page object model and separated my methods into individual related classes as this helps keep the code 'DRY', maintainable and able to pick up again and add to it at any point. 
+- I focused on building a BDD Cucumber page object model and separated my methods into individual related classes. This means I can keep the code 'DRY', maintainable and able to pick up again and add to it at any point. 
 - Each test has a cucumber feature file. The steps for the feature files have a corresponding step_defs file in the 'step definitions' folder which call methods for each step from the 'pages' folder.
 
 **Test 1 - Form Authentication**
