@@ -3,7 +3,7 @@ Deliver a working test suite for the following examples from https://the-interne
 
 - **Feature 1  -Form Authentication**
 
-- Scenario 1 - (@auth1)
+**- Scenario 1** - (@auth1)
 Navigate to https://the-internet.herokuapp.com/
 Click 'Form Authentication'.
 Confirm can input correct details and enter account
