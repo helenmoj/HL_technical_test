@@ -70,7 +70,7 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 
 - Clone this git repository (or download instead)
 - Navigate to the project folder in your terminal.
-- To run the tests you must first initialize cucumber by entering cucumber --init in the terminal.
+- To run the tests you must first initialize cucumber by entering 'cucumber --init' in the terminal.
 - Again in terminal, run 'bundle' to make sure you have the appropriate gems installed
 
 - To run all of the scenarios within a feature file run the tag set at the start of the feature cucumber -t @(tag_name), example - cucumber -t @JSTests
@@ -79,7 +79,7 @@ The user selects 'Cancel' on the JS popup,then will see the message - 'You enter
 
 **- Approach**
 
-- I focused on building a page object model and separated my methods into individual related classes as this helps keep the code 'DRY' and easy to pick up, maintain and add to at any point. 
+- I focused on building a page object model and separated my methods into individual related classes as this helps keep the code 'DRY', maintain and add to pick up at any point. 
 - Each test has a cucumber feature file. The steps for the feature files have a corresponding step_defs file in the 'step definitions' folder which call methods for each step from the 'pages' folder.
 
 - **Test 1 - Form Authentication**
